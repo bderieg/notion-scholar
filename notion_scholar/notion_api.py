@@ -77,7 +77,6 @@ def add_publications_to_database(
             parent={'database_id': database_id},
             properties={
                 'Title': Property.title(publication.title),
-                'Bibtex': Property.rich_text(bibtex),
                 'Filename': Property.rich_text(publication.key),
                 'Journal': Property.rich_text(publication.journal),
                 'Authors': Property.rich_text(authors),
