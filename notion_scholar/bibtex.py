@@ -103,7 +103,7 @@ def get_publication_list(bib_database: BibDatabase) -> List[Publication]:
                 authors=entry.get('author', '').replace('\n', ' ').replace('{','').replace('}',''),
                 year=int(entry['year']) if 'year' in entry.keys() else None,
                 journal=entry.get('journal', ''),
-                url=entry.get('url', ''),
+                url=entry.get('adsurl', ''),
                 abstract=entry.get('abstract', ''),
                 doi=entry.get('doi', ''),
                 type=entry.get('ENTRYTYPE', '').lower(),
