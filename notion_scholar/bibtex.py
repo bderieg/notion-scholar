@@ -99,7 +99,7 @@ def get_publication_list(bib_database: BibDatabase) -> List[Publication]:
         publications.append(
             Publication(
                 key=entry.get('ID', ''),
-                title=entry.get('title', ''),
+                title=entry.get('title', '').replace('{','').replace('}',''),
                 authors=entry.get('author', '').replace('\n', ' '),
                 year=int(entry['year']) if 'year' in entry.keys() else None,
                 journal=entry.get('journal', ''),
